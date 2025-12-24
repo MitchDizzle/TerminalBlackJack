@@ -346,7 +346,7 @@ export class BlackJackGame {
     while (this.gameActive) {
       await this.playRound(getSingleKey);
 
-      this.redrawScreen(chalk.yellow('Press (Y) to play again or (Q) to quit'));
+      this.redrawScreen(chalk.yellow('Press (Y/H) to play again or (Q) to quit'));
 
       const action = await getSingleKey();
       const choice = action.toLowerCase();
@@ -359,8 +359,8 @@ export class BlackJackGame {
         console.log(chalk.cyan.bold('Thanks for playing Terminal BlackJack!'));
         console.log('');
         process.exit(0);
-      } else if (choice !== 'y') {
-        this.redrawScreen(chalk.red('Invalid choice. Press (Y) to play again or (Q) to quit'));
+      } else if (choice !== 'y' || choice !== 'h') {
+        this.redrawScreen(chalk.red('Invalid choice. Press (Y) or (H) to play again or (Q) to quit'));
         await this.sleep(1000);
       }
       this.lastResult = " ";

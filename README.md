@@ -2,9 +2,9 @@
 
 A feature-rich command-line BlackJack game with dynamic UI, statistics tracking, and Hi-Lo card counting.
 
-![Start](/img/start.jpg?raw=true "BlackJack Start")
+![Start](/img/start.png?raw=true "BlackJack Start")
 
-![Win](/img/win.jpg?raw=true "BlackJack Win")
+![Win](/img/win.png?raw=true "BlackJack Win")
 
 ## Features
 
@@ -15,6 +15,12 @@ A feature-rich command-line BlackJack game with dynamic UI, statistics tracking,
 - Standard casino rules implementation
 - Real-time Hi-Lo card counting system
 - Automatic shuffle at 25% deck remaining
+
+## Prerequisites
+
+Before running this project, you need to have [Node.js](https://nodejs.org/en/) installed on your system.
+
+*   **Recommended version:** Node.js v20 or higher (LTS version is preferred).
 
 ## Installation
 
