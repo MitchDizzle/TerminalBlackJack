@@ -49,22 +49,6 @@ export class Statistics {
 
   getWinRate() {
     if (this.gamesPlayed === 0) return 0;
-    return ((this.gamesWon / this.gamesPlayed) * 100).toFixed(2);
-  }
-
-  display(decksRemaining) {
-    console.log('\n========== STATISTICS ==========');
-    console.log(`Games Played: ${this.gamesPlayed}`);
-    console.log(`Games Won: ${this.gamesWon}`);
-    console.log(`Games Lost: ${this.gamesLost}`);
-    console.log(`Games Tied: ${this.gamesTied}`);
-    console.log(`Win Rate: ${this.getWinRate()}%`);
-    console.log(`Blackjacks: ${this.blackjacks}`);
-    console.log(`Player Busts: ${this.busts}`);
-    console.log(`Dealer Busts: ${this.dealerBusts}`);
-    console.log('--------------------------------');
-    console.log(`Hi-Lo Running Count: ${this.runningCount > 0 ? '+' : ''}${this.runningCount}`);
-    console.log(`Hi-Lo True Count: ${this.calculateTrueCount(decksRemaining) > 0 ? '+' : ''}${this.trueCount}`);
-    console.log('================================\n');
+    return ((this.gamesWon / this.gamesPlayed) * 100).toFixed(0);
   }
 }

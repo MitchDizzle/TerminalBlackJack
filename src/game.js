@@ -52,7 +52,7 @@ export class BlackJackGame {
     console.log(
       chalk.yellow(`  Hi-Lo: `) +
       chalk.white(`R ${runningCount > 0 ? '+' : ''}${runningCount}`) +
-      chalk.gray(' | ') +
+      chalk.gray(' / ') +
       chalk.white(`T ${trueCount > 0 ? '+' : ''}${trueCount}`) +
       chalk.gray(' | ') +
       chalk.yellow(`BJ: ${this.statistics.blackjacks}`) +
@@ -86,7 +86,7 @@ export class BlackJackGame {
   }
 
   isBlackjack(hand) {
-    return hand.length === 2 && this.calculateHandValue(hand) === 21;
+    return this.calculateHandValue(hand) === 21;
   }
 
   dealInitialCards() {
@@ -138,7 +138,7 @@ export class BlackJackGame {
         this.gameInProgress = false;
         return 'stand';
       } else if (choice === 'x') {
-        // Hidden shuffle command - shhh! 🤫
+        // Hidden shuffle command
         this.redrawScreen(chalk.magenta.bold('🎴 Secret shuffle activated! 🎴'));
         await this.sleep(1000);
         await this.forceShuffle();
