@@ -86,7 +86,7 @@ export class BlackJackGame {
   }
 
   isBlackjack(hand) {
-    return this.calculateHandValue(hand) === 21;
+    return hand.length === 2 && this.calculateHandValue(hand) === 21;
   }
 
   dealInitialCards() {
@@ -359,7 +359,7 @@ export class BlackJackGame {
         console.log(chalk.cyan.bold('Thanks for playing Terminal BlackJack!'));
         console.log('');
         process.exit(0);
-      } else if (choice !== 'y' || choice !== 'h') {
+      } else if (choice !== 'y' && choice !== 'h') {
         this.redrawScreen(chalk.red('Invalid choice. Press (Y) or (H) to play again or (Q) to quit'));
         await this.sleep(1000);
       }
