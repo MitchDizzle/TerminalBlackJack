@@ -75,12 +75,10 @@ export class BlackJackGame {
     console.clear();
     this.displayScoreboard();
     console.log('');
-    if (this.lastResult) {
-      console.log(this.lastResult);
-      console.log('');
-    }
     console.log(this.displayHand(this.dealerHand, this.gameInProgress, 'Dealer'));
     console.log(this.displayHand(this.playerHand, false, 'Player'));
+    console.log('');
+    console.log(this.lastResult);
     if (message) {
       console.log('');
       console.log(message);
@@ -365,6 +363,7 @@ export class BlackJackGame {
         this.redrawScreen(chalk.red('Invalid choice. Press (Y) to play again or (Q) to quit'));
         await this.sleep(1000);
       }
+      this.lastResult = " ";
     }
   }
 }
