@@ -43,6 +43,7 @@ async function question(query) {
 }
 
 async function main() {
+  process.title = "Terminal Blackjack";
   console.clear();
   console.log('═══════════════════════════════════════════════════════════════════');
   console.log('                    WELCOME TO TERMINAL BLACKJACK');
